@@ -16,3 +16,12 @@ def test_test_credit_card_with_mastercard(capsys):
 
     captured = capsys.readouterr()
     assert captured.out.strip() == "Кредитная карта: Оплата через MasterCard"
+
+def test_test_credit_card_with_mastercard(capsys):
+    card=CreditCard(MasterCard())
+
+    card.pay()
+
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Кредитная карта: лата через MasterCard"
+
